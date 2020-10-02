@@ -17,6 +17,6 @@ app.use("/api", require("./routes/api")); // we can use router from api.js// and
 //   res.status(422).send({ error: err._message });
 // });
 
-app.listen(process.env.port || 4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("now listening for request");
 });
