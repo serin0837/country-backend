@@ -4,7 +4,16 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
-mongoose.connect("mongodb://localhost/countryList");
+
+mongoose
+  .connect(
+    "mongodb+srv://serin:serin0837@cluster0.ai95b.mongodb.net/countyList?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(console.log("mongo connect"));
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
