@@ -1,7 +1,7 @@
-run mongo db
+run mongo db locally
 "C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe"
 
-mongoDB Atlas
+mongoDB Atlas < youtube: yoursTRULY>
 
 - not locally
 - go mongoDB atlas
@@ -15,7 +15,7 @@ mongoDB Atlas
 - and it looks like connected but how can i check?
 - I can check in mongo Atlas! post request is working but my locally saved data is just sit locally
 - so i just move to atalas!!
-
+- I can see it in heroku
   backlog
 
 - 10.02.20 deploy error with heroku

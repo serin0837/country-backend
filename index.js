@@ -2,6 +2,7 @@ const express = require("express");
 
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+var cors = require("cors");
 
 const app = express();
 
@@ -16,6 +17,7 @@ mongoose
   .then(console.log("mongo connect"));
 mongoose.Promise = global.Promise;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/api", require("./routes/api")); // we can use router from api.js// and add "api" url
