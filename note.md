@@ -92,6 +92,11 @@ objectid(aaf1),
 ]
 }
 
+# API plan
+
+- /countries -> get, post
+- /countries/:id->get, update,delete
+
 # backlog
 
 - 10.02.20 deploy error with heroku

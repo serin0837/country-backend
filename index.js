@@ -22,8 +22,6 @@ app.use(bodyParser.json());
 
 app.use("/api", require("./routes/api")); // we can use router from api.js// and add "api" url
 
-// app.use("/api", require("./routes/api"));
-
 // app.use(function (err, req, res, next) {
 //   res.status(422).send({ error: err._message });
 // });
