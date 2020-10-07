@@ -95,7 +95,8 @@ objectid(aaf1),
 # API plan
 
 - /countries -> get, post
-- /countries/:id->get, update,delete
+- /countries/(countryname)->get, update,delete
+- /region/(regionname)->get
 
 # backlog
 

@@ -17,9 +17,9 @@ router.post("/countries", function (req, res) {
   });
 });
 
-//get country by id//working
+//get country by name//working!
 router.get("/countries/:id", function (req, res) {
-  Country.findById({ _id: req.params.id }, req.body, { new: true }).then(
+  Country.findOne({ name: req.params.id }, req.body, { new: true }).then(
     function (country) {
       res.send(country);
     }
@@ -41,4 +41,19 @@ router.delete("/countries/:id", function (req, res) {
   });
 });
 
+//get country with region
+router.get("/region", function (req, res) {
+  Country.find({}).then(function (country) {
+    res.send(country);
+  });
+});
+
+//get country by region name//working!// but region need to start capital
+router.get("/region/:id", function (req, res) {
+  Country.find({ region: req.params.id }, req.body, { new: true }).then(
+    function (country) {
+      res.send(country);
+    }
+  );
+});
 module.exports = router;
