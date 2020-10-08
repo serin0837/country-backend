@@ -20,8 +20,9 @@ const CountrySchema = new Schema({
 });
 
 const Country = mongoose.model("country", CountrySchema);
+const ImaginaryCountry = mongoose.model("imaginaryCountry", CountrySchema);
 
-module.exports = Country;
+module.exports = { Country, ImaginaryCountry };
 
 // {"name":"Falkland Islands (Malvinas)",
 // "topLevelDomain":[".fk"],

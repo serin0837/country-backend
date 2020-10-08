@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Country = require("../models/country");
+const { Country, ImaginaryCountry } = require("../models/country");
 
 //get every country
 router.get("/countries", function (req, res) {
@@ -13,6 +13,13 @@ router.get("/countries", function (req, res) {
 router.post("/countries", function (req, res) {
   //new instance of County object
   Country.create(req.body).then(function (country) {
+    res.send(country);
+  });
+});
+
+router.post("/imaginarycountries", function (req, res) {
+  //new instance of County object
+  ImaginaryCountry.create(req.body).then(function (country) {
     res.send(country);
   });
 });
