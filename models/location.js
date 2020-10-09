@@ -11,7 +11,7 @@ const LocationSchema = new Schema({
   lng: {
     type: Number,
   },
-  Description: {
+  description: {
     type: String,
   },
   color: {
