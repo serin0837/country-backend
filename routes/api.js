@@ -17,9 +17,15 @@ router.post("/countries", function (req, res) {
   });
 });
 
+//add a imaginary countries -> working!!
 router.post("/imaginarycountries", function (req, res) {
-  //new instance of County object
   ImaginaryCountry.create(req.body).then(function (country) {
+    res.send(country);
+  });
+});
+//get imaginary countries 
+router.get("/imaginarycountries", function (req, res) {
+  ImaginaryCountry.find({}).then(function (country) {
     res.send(country);
   });
 });
