@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { Country, ImaginaryCountry } = require("../models/country");
+const Location = require("../models/location")
 
 //get every country
 router.get("/countries", function (req, res) {
@@ -69,5 +70,19 @@ router.get("/region/:id", function (req, res) {
       res.send(country);
     }
   );
+});
+
+//get every location
+router.get("/locations", function (req, res) {
+  Location.find({}).then(function (location) {
+    res.send(location);
+  });
+});
+
+// add a location to db
+router.post("/locations", function (req, res) {
+  Location.create(req.body).then(function (location) {
+    res.send(location);
+  });
 });
 module.exports = router;
