@@ -1,5 +1,11 @@
+# Description
+
+Back end made with Node, Express, MongoDB
+
 # End point
 
 - /countries -> get, post
-- /countries/(countryname)->get, update,delete
+- /imaginarycountries ->get, post
+- /countries/(countryname)->get
+- /countries/(countryid)->update, delete
 - /region/(regionname)->get
