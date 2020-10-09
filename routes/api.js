@@ -20,9 +20,10 @@ router.post("/countries", function (req, res) {
 //add a imaginary countries -> working!!
 router.post("/imaginarycountries", function (req, res) {
   ImaginaryCountry.create(req.body).then(function (country) {
-    res.send(country);
+    res.send(country).catch((err)=>res.status(400).json("error"+err));
   });
 });
+
 //get imaginary countries 
 router.get("/imaginarycountries", function (req, res) {
   ImaginaryCountry.find({}).then(function (country) {
