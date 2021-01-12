@@ -12,4 +12,4 @@ Back end made with Node, Express, MongoDB
 
 # Live
 
-[here]https://country-back.herokuapp.com/api/
+[here]https://country-back.herokuapp.com/api/countries
