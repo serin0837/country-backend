@@ -5,10 +5,10 @@ Back end made with Node, Express, MongoDB.
 # API End point
 
 - /countries -> get, post
-- /imaginarycountries ->get, post
-- /countries/(countryname)->get
-- /countries/(countryid)->update, delete
-- /region/(regionname)->get
+- /imaginarycountries -> get, post, delete, patch(update)
+- /countries/(countryname)-> get
+- /countries/(countryid)-> update, delete
+- /region/(regionname)-> get
 
 # Live
 
