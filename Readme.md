@@ -1,8 +1,8 @@
 # Description
 
-Back end made with Node, Express, MongoDB
+Back end made with Node, Express, MongoDB.
 
-# End point
+# API End point
 
 - /countries -> get, post
 - /imaginarycountries ->get, post
@@ -12,4 +12,4 @@ Back end made with Node, Express, MongoDB
 
 # Live
 
-[here]https://country-back.herokuapp.com/api/countries
+[here](https://country-back.herokuapp.com/api/countries)

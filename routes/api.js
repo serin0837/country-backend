@@ -32,6 +32,23 @@ router.get("/imaginarycountries", function (req, res) {
   });
 });
 
+
+//update country//working
+router.patch("/imaginarycountries/:id", function (req, res) {
+  Country.findByIdAndUpdate({ _id: req.params.id }, req.body, {
+    new: true,
+  }).then(function (country) {
+    res.send(country);
+  });
+});
+//delete country//working
+router.delete("/imaginarycountries/:id", function (req, res) {
+  Country.findByIdAndRemove({ _id: req.params.id }).then(function (country) {
+    res.send(country);
+  });
+});
+
+
 //get country by name//working!
 router.get("/countries/:id", function (req, res) {
   Country.findOne({ name: req.params.id }, req.body, { new: true }).then(
