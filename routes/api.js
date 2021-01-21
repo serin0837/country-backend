@@ -35,7 +35,7 @@ router.get("/imaginarycountries", function (req, res) {
 
 //update country//working
 router.patch("/imaginarycountries/:id", function (req, res) {
-  Country.findByIdAndUpdate({ _id: req.params.id }, req.body, {
+  ImaginaryCountry.findByIdAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
   }).then(function (country) {
     res.send(country);
@@ -43,7 +43,7 @@ router.patch("/imaginarycountries/:id", function (req, res) {
 });
 //delete country//working
 router.delete("/imaginarycountries/:id", function (req, res) {
-  Country.findByIdAndRemove({ _id: req.params.id }).then(function (country) {
+  ImaginaryCountry.findByIdAndRemove({ _id: req.params.id }).then(function (country) {
     res.send(country);
   });
 });
