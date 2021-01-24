@@ -32,6 +32,12 @@ router.get("/imaginarycountries", function (req, res) {
   });
 });
 
+//get imaginary countries by id 
+router.get("/imaginarycountries/:id", function (req, res) {
+  ImaginaryCountry.findOne({ _id: req.params.id}).then(function (country) {
+    res.send(country).catch((err)=>res.status(400).json("error"+err));
+  });
+});
 
 //update country//working
 router.patch("/imaginarycountries/:id", function (req, res) {
