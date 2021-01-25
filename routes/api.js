@@ -68,6 +68,7 @@ router.get("/countries/:id", function (req, res) {
 router.patch("/countries/:id", function (req, res) {
   Country.findByIdAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
+    
   }).then(function (country) {
     res.send(country);
   });
